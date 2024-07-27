@@ -1,0 +1,263 @@
+site_name: HedgeDocs
+site_url: https://hedgedocs.com
+repo_url: https://github.com/hedgedocs/hedgedocs.github.io
+edit_uri: edit/main/hedgedocs/
+site_description: Sonic the Hedgehog modding guides and tools
+docs_dir: hedgedocs
+nav:
+  - Home: index.md
+  - Tools:
+    - tools/index.md
+    - Various Engines:
+      - File Formats: tools/general/files.md
+      - Audio: tools/general/audio.md
+    - Hedgehog Engine:
+      - Common:
+        - File Formats: tools/hedgehog-engine/common/files.md
+        - Lighting/GI: tools/hedgehog-engine/common/lighting.md
+        - Models: tools/hedgehog-engine/common/models.md
+        - Text: tools/hedgehog-engine/common/text.md
+        - Level Editing: tools/hedgehog-engine/common/levels.md
+        - Animation: tools/hedgehog-engine/common/animation.md
+      - Sonic Unleashed:
+        - File Formats: tools/hedgehog-engine/swa/files.md
+      - Sonic Generations:
+        - File Formats: 
+          - XNCP (UI): tools/hedgehog-engine/blueblur/files/xncp.md
+          - GTE/GTM (Particle): tools/hedgehog-engine/blueblur/files/gte.md
+          - AR/ARL (Archive): tools/hedgehog-engine/blueblur/files/ar.md
+          - FCO (Text): tools/hedgehog-engine/blueblur/files/fco.md
+          - SAV (Save File): tools/hedgehog-engine/blueblur/files/sav.md
+        - Level Editing: tools/hedgehog-engine/blueblur/levels.md
+      - Sonic Colors:
+        - File Formats: 
+          - General: tools/hedgehog-engine/sonic2010/files/general.md
+          - XNCP (UI): tools/hedgehog-engine/sonic2010/files/xncp.md
+          - ARC (Archive): tools/hedgehog-engine/sonic2010/files/arc.md
+          - XTB: tools/hedgehog-engine/sonic2010/files/xtb.md
+        - Level Editing: tools/hedgehog-engine/sonic2010/levels.md
+      - Sonic Lost World:
+        - Level Editing: tools/hedgehog-engine/sonic2013/levels.md
+      - 'Sonic Colors: Ultimate':
+        - File Formats: tools/hedgehog-engine/rainbow/files.md
+      - Sonic Frontiers:
+        - File Formats: 
+          - ANM.PXD (Animation): tools/hedgehog-engine/rangers/files/anmpxd.md
+          - CEMT: tools/hedgehog-engine/rangers/files/cemt.md
+          - RFL: tools/hedgehog-engine/rangers/files/rfl.md
+          - BTMESH (Collision): tools/hedgehog-engine/rangers/files/btmesh.md
+        - Models: tools/hedgehog-engine/rangers/models.md
+    - Sega NN:
+        - Sonic The Hedgehog (2006):
+          - File Formats: tools/nn/marathon/files.md
+          - Level Editing: tools/nn/marathon/levels.md
+    - Renderware:
+      - Common: 
+        - File Formats:
+          - ONE: tools/renderware/common/files/one.md
+          - PAC: tools/renderware/common/files/pac.md
+          - TXD: tools/renderware/common/files/txd.md
+        - Level Editing: tools/renderware/common/levels.md
+    - Retro Engine:
+      - Common:
+        - File Formats: tools/retro-engine/common/files.md
+        - Models: tools/retro-engine/common/models.md
+        - Animation: tools/retro-engine/common/animation.md
+    - Others:
+      - Sonic Adventure:
+        - File Formats: tools/others/adventure/files.md
+  - Guides:
+    - guides/index.md
+    - Hedgehog Engine:
+      - Sonic Unleashed:
+          - Level Editing: 
+            - Sonic GLvl: guides/hedgehog-engine/swa/levels/glvl.md
+      - Sonic Generations: 
+        - File Formats:
+          - XNCP (UI): 
+            - Basics: guides/hedgehog-engine/blueblur/files/xncp/basics.md
+            - Animations: guides/hedgehog-engine/blueblur/files/xncp/anims.md
+        - Level Editing:
+          - Sonic GLvl: guides/hedgehog-engine/blueblur/levels/glvl.md
+          - Importing Terrain: guides/hedgehog-engine/blueblur/levels/importing-terrain.md
+          - Importing Collision: guides/hedgehog-engine/blueblur/levels/importing-collision.md
+          - Custom Rank Times: guides/hedgehog-engine/blueblur/levels/custom-ranks.md     
+          - Troubleshooting: guides/hedgehog-engine/blueblur/levels/troubleshooting.md         
+        - File Locations: 
+          - Sounds: guides/hedgehog-engine/blueblur/locations/sound.md
+      - Sonic Frontiers:
+        - Cyloop:
+          - Replacing Cyloop Color: guides/hedgehog-engine/rangers/cyloop/color.md
+        - Audio:
+          - Replacing Audio: guides/hedgehog-engine/rangers/audio/replacing.md
+        - Animation:
+          - Importing & Exporting: guides/hedgehog-engine/rangers/animation/import-export.md
+        - Materials:
+          - Advanced Material Editing Tutorial: guides/hedgehog-engine/rangers/materials/advanced-mats.md
+        - Models:
+          - Importing Models: guides/hedgehog-engine/rangers/models/import.md
+    - Sega NN:
+      - Sonic The Hedgehog (2006):
+        - Level Editing:
+          - Sonic GLvl: guides/nn/marathon/levels/glvl.md
+    - Hedge Mod Manager: 
+      - Wiki (GitHub): https://github.com/thesupersonic16/HedgeModManager/wiki
+  - Documentation:
+    - docs/index.md
+    - Various Engines:
+      - HSON Format: docs/general/hson.md
+    - Hedgehog Engine:
+      - Game List: docs/hedgehog-engine/gamelist.md
+      - Sonic Generations: 
+        - Levels: 
+          - Level ID Map: docs/hedgehog-engine/blueblur/levels/ids.md
+        - Event List: docs/hedgehog-engine/blueblur/events.md
+        - Camera Types: docs/hedgehog-engine/blueblur/cameras.md
+      - Sonic Unleashed: 
+        - Levels: 
+          - Level ID Map: docs/hedgehog-engine/swa/levels/ids.md
+          - Town ID Map: docs/hedgehog-engine/swa/towns/ids.md
+        - Cutscenes: 
+          - Cutscene ID Map: docs/hedgehog-engine/swa/cutscenes/ids.md
+      - Sonic Colors:
+        - File Formats:
+          - Light Field: docs/hedgehog-engine/sonic2010/files/lightfield.md
+          - Set Object: docs/hedgehog-engine/sonic2010/files/setobject.md
+      - Sonic Forces: 
+        - Levels: 
+          - Level ID Map: docs/hedgehog-engine/wars/levels/ids.md
+      - Sonic Frontiers:
+        - DLC:
+          - DLC ID Map: docs/hedgehog-engine/rangers/dlc/ids.md
+        - Enemies:
+          - Guardians:
+            - Internal Names: docs/hedgehog-engine/rangers/enemies/guardians/names.md
+        - Events:
+          - Event ID Map: docs/hedgehog-engine/rangers/events/ids.md
+        - File Formats:
+          - RFL:
+            - RFL Binary Template Map: docs/hedgehog-engine/rangers/files/rfl/mapping.md
+        - Levels:
+          - Level ID Map: docs/hedgehog-engine/rangers/levels/ids.md
+        - Objects:
+          - Gismos: docs/hedgehog-engine/rangers/obj/gismos.md
+        - Scripts:
+          - Functions: docs/hedgehog-engine/rangers/scripts/funcs.md
+    - Sega NN:
+      - Common:
+        - NN Chunk Format:
+          - docs/nn/common/chunk-format/index.md
+          - Common Definitions: docs/nn/common/chunk-format/common-definitions.md
+          - TEXLIST: docs/nn/common/chunk-format/texlist.md
+          - NODENAMELIST: docs/nn/common/chunk-format/nodenamelist.md
+          - MATERIALNAMELIST: docs/nn/common/chunk-format/materialnamelist.md
+          - MOTION: docs/nn/common/chunk-format/motion.md
+  - Discoveries:
+    - discoveries/index.md
+    - Sonic Unleashed:
+      - PlayStation 3:
+        - Leftover Install Assets: discoveries/swa/ps3/install.md
+    - Sonic Colors:
+      - Objects:
+        - Unused Objects: discoveries/sonic2010/objects/unused.md
+    - Sonic Generations:
+      - HUD:
+        - Unused Time Eater Gauge: discoveries/blueblur/hud/blb_gauge.md
+    - Sonic Lost World:
+      - Cutscenes:
+        - Real-Time Cutscene Levels: discoveries/sonic2013/cutscenes/levels.md
+      - Levels:
+        - Colors Leftovers: discoveries/sonic2013/levels/colors.md
+        - Test Levels: discoveries/sonic2013/levels/test.md
+        - Deleted Levels: discoveries/sonic2013/levels/deleted.md
+        - Original Level Order: discoveries/sonic2013/levels/original-order.md
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+extra_css:
+  - web/stylesheets/extra.css
+  - web/stylesheets/amoled.css
+  - web/stylesheets/dark.css
+  - web/stylesheets/rangers.css
+extra_javascript:
+  - web/javascripts/custom.js
+plugins:
+  - search
+  - git-committers:
+      enabled: !ENV [ENABLE_GIT_PLUGINS, False]
+      repository: HedgeDocs/HedgeDocs.github.io
+      branch: main
+      exclude: 
+        - index.md
+        - tools/*
+        - guides/index.md
+        - discoveries/index.md
+        - docs/index.md
+  - git-revision-date-localized:
+      enabled: !ENV [ENABLE_GIT_PLUGINS, False]
+      type: timeago
+      exclude:
+        - index.md
+        - tools/*
+        - guides/index.md
+        - discoveries/index.md
+        - docs/index.md
+theme:
+  logo: web/images/icon.svg
+  favicon: web/images/favicon.png
+  name: material
+  custom_dir: hedgedocs/web/overrides
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.sections
+  icon:
+    edit: material/file-edit-outline
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to AMOLED mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: rangers
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: amoled
+      toggle:
+        icon: material/brightness-2
+        name: Switch to light mode
