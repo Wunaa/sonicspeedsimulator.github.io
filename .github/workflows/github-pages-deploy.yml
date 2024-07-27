@@ -1,0 +1,30 @@
+name: github-pages-deploy
+on:
+  push:
+    paths:
+      - sssdocs/**
+      - .github/github-pages-deploy.yml
+      - mkdocs.yml
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  ENABLE_GIT_PLUGINS: True
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material==9.5.9
+      - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: pip install mkdocs-git-committers-plugin-2
+      - run: mkdocs gh-deploy --force
