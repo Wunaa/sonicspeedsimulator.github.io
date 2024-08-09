@@ -1,32 +1,41 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background: #0f0f0f;
+    color: white;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
 header {
-    background-color: #e60012;
-    color: white;
-    padding: 20px 0;
+    background: #001f3f;
+    padding: 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
+    position: fixed;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
     z-index: 1000;
+    transition: background 0.3s;
 }
 
-header h1 {
-    margin: 0;
+header.scrolled {
+    background: #000a1a;
+}
+
+header .logo img {
+    max-width: 300px;
+    transition: transform 0.5s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin-top: 20px;
 }
 
 nav ul li {
@@ -35,106 +44,134 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-}
-
-h2 {
-    color: #e60012;
-    border-bottom: 2px solid #e60012;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    animation: fadeIn 2s ease-out;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-article {
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-out;
-}
-
-article h3 {
-    color: #e60012;
-    margin-top: 0;
-}
-
-a {
-    color: #e60012;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.image-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-container img {
-    max-width: 90%;
-    height: auto;
-    border: 2px solid #e60012;
-    border-radius: 10px;
-    animation: zoomIn 1.5s ease-out;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
     position: relative;
-    bottom: 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00aaff;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+nav ul li a:hover::after {
     width: 100%;
 }
 
-#twitter-share-button {
-    display: inline-block;
-    background-color: #1da1f2;
-    color: white;
-    padding: 10px 20px;
+.hero {
+    background: linear-gradient(135deg, #00aaff, #001f3f);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: fadeInDown 1s ease-out;
+}
+
+.promo-video {
+    margin-top: 20px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.screenshots-gallery, .videos-gallery, .update-news, .twitter-feed {
+    padding: 50px 20px;
+    background: #001f3f;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.screenshots-gallery .gallery, .videos-gallery .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img, .gallery iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.gallery img:hover, .gallery iframe:hover {
+    transform: scale(1.05);
+}
+
+.update-news ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.update-news ul li {
+    background: #004080;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    animation: fadeInLeft 1s ease-out;
 }
 
-#twitter-share-button:hover {
-    background-color: #0d95e8;
+footer {
+    background: #001f3f;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
 }
 
-@keyframes fadeIn {
-    from {
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+    0% {
         opacity: 0;
+        transform: translateY(-50px);
     }
-    to {
+    100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.9);
+@keyframes bounceIn {
+    0% {
         opacity: 0;
+        transform: scale(0.3);
     }
-    to {
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
         transform: scale(1);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
         opacity: 1;
+        transform: translateX(0);
     }
 }
