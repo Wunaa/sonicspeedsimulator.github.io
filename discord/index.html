@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Scam Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stay Safe from Discord Scams</h1>
+        <p>Learn about the latest scams and how to protect yourself.</p>
+    </header>
+
+    <div class="container">
+        <div class="box" onclick="openPopup('popup1')">
+            <h2>Scam 1: Fake Nitro Giveaways</h2>
+            <p>Learn how scammers trick users with fake giveaways.</p>
+        </div>
+        <div class="box" onclick="openPopup('popup2')">
+            <h2>Scam 2: Phishing Links</h2>
+            <p>Beware of suspicious links that steal your information.</p>
+        </div>
+        <!-- Add more boxes as needed -->
+    </div>
+
+    <!-- Popups -->
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup1')">&times;</span>
+            <h2>Fake Nitro Giveaways</h2>
+            <p>Scammers often send messages offering free Discord Nitro. These are fake and designed to steal your personal information.</p>
+            <img src="nitro-scam.png" alt="Fake Nitro Example">
+            <video controls>
+                <source src="fake-nitro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup2')">&times;</span>
+            <h2>Phishing Links</h2>
+            <p>Phishing links look like legitimate URLs but are designed to steal your account information.</p>
+            <img src="phishing-link.png" alt="Phishing Link Example">
+            <video controls>
+                <source src="phishing-scam.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
