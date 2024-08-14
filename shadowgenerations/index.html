@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Script Generator</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .section input, .section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .section textarea {
+            height: 100px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .script-output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #eee;
+            white-space: pre-wrap;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Movie Script Generator</h1>
+
+        <div class="section">
+            <label for="scene-heading">Scene Heading (INT./EXT. LOCATION - TIME)</label>
+            <input type="text" id="scene-heading" placeholder="INT. COFFEE SHOP - DAY">
+        </div>
+
+        <div class="section">
+            <label for="action">Action</label>
+            <textarea id="action" placeholder="Describe the action in this scene..."></textarea>
+        </div>
+
+        <div class="section">
+            <label for="character-name">Character Name</label>
+            <input type="text" id="character-name" placeholder="CHARACTER NAME">
+        </div>
+
+        <div class="section">
+            <label for="dialogue">Dialogue</label>
+            <textarea id="dialogue" placeholder="Enter the dialogue for the character..."></textarea>
+        </div>
+
+        <div class="section">
+            <label for="parenthetical">Parenthetical (optional)</label>
+            <input type="text" id="parenthetical" placeholder="(whispering)">
+        </div>
+
+        <a class="btn" id="generate-script">Generate Script</a>
+
+        <div class="script-output" id="script-output"></div>
+    </div>
+
+    <script>
+        document.getElementById('generate-script').addEventListener('click', function() {
+            const sceneHeading = document.getElementById('scene-heading').value;
+            const action = document.getElementById('action').value;
+            const characterName = document.getElementById('character-name').value;
+            const dialogue = document.getElementById('dialogue').value;
+            const parenthetical = document.getElementById('parenthetical').value;
+
+            let script = '';
+
+            if (sceneHeading) {
+                script += sceneHeading + '\n\n';
+            }
+            if (action) {
+                script += action + '\n\n';
+            }
+            if (characterName) {
+                script += characterName.toUpperCase() + '\n';
+            }
+            if (parenthetical) {
+                script += `(${parenthetical})\n`;
+            }
+            if (dialogue) {
+                script += dialogue + '\n\n';
+            }
+
+            document.getElementById('script-output').textContent = script;
+        });
+    </script>
+
+</body>
+</html>
