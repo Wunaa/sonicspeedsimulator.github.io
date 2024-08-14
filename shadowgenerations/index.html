@@ -3,131 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Script Generator</title>
+    <title>Shadow Script</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #fff;
             margin: 0;
-            padding: 0;
+            padding: 20px;
+            line-height: 1.6;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: auto;
             padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         h1 {
             text-align: center;
             font-size: 24px;
             margin-bottom: 20px;
         }
-        .section {
+        .scene {
             margin-bottom: 20px;
         }
-        .section label {
-            display: block;
-            margin-bottom: 5px;
+        .scene-title {
             font-weight: bold;
-        }
-        .section input, .section textarea {
-            width: 100%;
-            padding: 10px;
+            text-transform: uppercase;
             margin-bottom: 10px;
-            font-family: 'Courier New', Courier, monospace;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
+            font-size: 18px;
         }
-        .section textarea {
-            height: 100px;
+        .action, .dialogue, .description {
+            margin-bottom: 20px;
         }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 4px;
-            cursor: pointer;
+        .character-name {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
-        .script-output {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #eee;
-            white-space: pre-wrap;
-            font-size: 16px;
+        .dialogue p {
+            margin: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Movie Script Generator</h1>
+        <h1>Shadow Script</h1>
 
-        <div class="section">
-            <label for="scene-heading">Scene Heading (INT./EXT. LOCATION - TIME)</label>
-            <input type="text" id="scene-heading" placeholder="INT. COFFEE SHOP - DAY">
+        <div class="scene">
+            <div class="scene-title">INT. ARK - CORRIDORS - NIGHT</div>
+            <div class="description">
+                <p>Shadow was deep within the corridors of the ARK, his mind focused as he scanned the area, tracking an unknown energy signature. The flickering lights cast long shadows, reminding him of memories he'd rather forget. As he moved closer to the source, a sudden and ominous presence filled the room.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <label for="action">Action</label>
-            <textarea id="action" placeholder="Describe the action in this scene..."></textarea>
+        <div class="scene">
+            <div class="scene-title">EXT. VORTEX - UNKNOWN TIME</div>
+            <div class="description">
+                <p>The Time Eater, a creature born of chaos and time distortion, emerged from a swirling vortex, its dark form pulsating with power. Before Shadow could react, the Time Eater lashed out, its energy wrapping around him, pulling him into the vortex. Shadow struggled, but the force was too great. In an instant, everything around him warped and twisted as he was dragged through time itself.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <label for="character-name">Character Name</label>
-            <input type="text" id="character-name" placeholder="CHARACTER NAME">
+        <div class="scene">
+            <div class="scene-title">INT. ARK - PAST</div>
+            <div class="description">
+                <p>When Shadow regained his bearings, he found himself in a place both familiar and unsettling. He was on the ARK again, but it wasn’t the present—this was the past, the time when everything had gone wrong. Shadow clenched his fists.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <label for="dialogue">Dialogue</label>
-            <textarea id="dialogue" placeholder="Enter the dialogue for the character..."></textarea>
+        <div class="scene">
+            <div class="scene-title">INT. ARK - TWISTED CORRIDORS</div>
+            <div class="description">
+                <p>As Shadow navigated the twisted corridors of the ARK, the air grew heavy with a sinister energy. He sensed something familiar yet malevolent approaching. The environment around him began to shift, the cold, metallic walls of the ARK dissolving into a chaotic fusion of dark cityscapes. The skyline of Westopolis bled into the winding roads of Radical Highway, creating a nightmarish landscape that blended two of Shadow’s most haunting memories.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <label for="parenthetical">Parenthetical (optional)</label>
-            <input type="text" id="parenthetical" placeholder="(whispering)">
+        <div class="scene">
+            <div class="scene-title">EXT. TWISTED CITYSCAPE - NIGHT</div>
+            <div class="description">
+                <p>Suddenly, a glowing red orb appeared in the sky—a single, unblinking eye that Shadow knew all too well. It was Doom's Eye, the star-shaped form of Black Doom, hovering above and watching his every move.</p>
+            </div>
+            <div class="character-name">Doom's Eye</div>
+            <div class="dialogue">
+                <p>"Shadow..."</p>
+                <p>"My greatest creation, even now you persist in defying your fate. But your destiny is inescapable."</p>
+            </div>
         </div>
 
-        <a class="btn" id="generate-script">Generate Script</a>
+        <div class="scene">
+            <div class="scene-title">EXT. CHAOTIC LANDSCAPE - NIGHT</div>
+            <div class="description">
+                <p>As Doom's Eye spoke, the world around Shadow shifted, the once-stable ground transforming into a treacherous path that twisted and turned with every step. Buildings from Westopolis merged with the highways and bridges of Radical Highway, forming a dangerous, ever-changing arena that challenged Shadow's every move.</p>
+            </div>
+            <div class="character-name">Doom's Eye</div>
+            <div class="dialogue">
+                <p>"You were born for a purpose, Shadow,"</p>
+                <p>"And no matter how far you run, no matter how many battles you fight, you cannot escape what you were meant to be."</p>
+            </div>
+        </div>
 
-        <div class="script-output" id="script-output"></div>
+        <div class="scene">
+            <div class="scene-title">EXT. CHAOTIC LANDSCAPE - CONTINUOUS</div>
+            <div class="description">
+                <p>With every step, the world grew darker, more chaotic. The roads beneath Shadow's feet twisted and crumbled, while the night sky above swirled with unnatural energy. Doom's Eye hovered close, its presence a constant reminder of the darkness that Shadow had fought so hard to escape.</p>
+            </div>
+            <div class="character-name">Doom's Eye</div>
+            <div class="dialogue">
+                <p>"You think you can defy me? Defy your true nature?"</p>
+                <p>"You were created to serve, to bring about the end of this world. And that purpose will be fulfilled, no matter what you do."</p>
+            </div>
+        </div>
+
+        <div class="scene">
+            <div class="scene-title">EXT. CHAOTIC LANDSCAPE - NIGHT</div>
+            <div class="description">
+                <p>Shadow clenched his fists, pushing forward through the nightmarish landscape, his mind racing. He knew that Doom's Eye was trying to break him, to force him to surrender to the fate that had been thrust upon him. But Shadow had made his choice long ago—to fight for his own path, for his own future.</p>
+            </div>
+        </div>
+
+        <div class="scene">
+            <div class="scene-title">EXT. FUSION OF WESTOPOLIS AND RADICAL HIGHWAY</div>
+            <div class="description">
+                <p>As the level twisted further, the fusion of Westopolis and Radical Highway became more intense, with obstacles from both environments combining to challenge Shadow's every move. Doom's Eye followed closely, never letting Shadow out of its sight, constantly speaking, trying to wear him down with words of doom and despair.</p>
+            </div>
+            <div class="character-name">Doom's Eye</div>
+            <div class="dialogue">
+                <p>"But Shadow's resolve only strengthened. He wouldn't let Doom's Eye control his fate. No matter how chaotic the world around him became, he would find a way to break free from the chains of his past and carve out his own destiny."</p>
+            </div>
+        </div>
+
     </div>
-
-    <script>
-        document.getElementById('generate-script').addEventListener('click', function() {
-            const sceneHeading = document.getElementById('scene-heading').value;
-            const action = document.getElementById('action').value;
-            const characterName = document.getElementById('character-name').value;
-            const dialogue = document.getElementById('dialogue').value;
-            const parenthetical = document.getElementById('parenthetical').value;
-
-            let script = '';
-
-            if (sceneHeading) {
-                script += sceneHeading + '\n\n';
-            }
-            if (action) {
-                script += action + '\n\n';
-            }
-            if (characterName) {
-                script += characterName.toUpperCase() + '\n';
-            }
-            if (parenthetical) {
-                script += `(${parenthetical})\n`;
-            }
-            if (dialogue) {
-                script += dialogue + '\n\n';
-            }
-
-            document.getElementById('script-output').textContent = script;
-        });
-    </script>
 
 </body>
 </html>
